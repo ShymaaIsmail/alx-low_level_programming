@@ -15,7 +15,7 @@ int main(void)
 
 	for (s = 0; s < 26; s++)
 	{
-		 putchar(firstSmallChar + s);
+		putchar(firstSmallChar + s);
 	}
 	for (c = 0; c < 26; c++)
 	{
