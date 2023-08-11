@@ -10,11 +10,11 @@
 int main(void)
 {
 	int n;
+	int reminder;
 	char *comparison_text;
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	int reminder = n % 10;
-
+	reminder = n % 10;
 	if (reminder > 5)
 	{
 		comparison_text = "greater than 5";
