@@ -4,8 +4,8 @@
 
 /**
  * main - Entry point to last digit program
- * Description: it detects the last digit of a random number 
- * Return: Always 0 
+ * Description: it detects the last digit of a random number
+ * Return: Always 0
  */
 int main(void)
 {
