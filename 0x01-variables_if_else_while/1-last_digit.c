@@ -1,28 +1,33 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point to last digit program
+ * Description: it detects the last digit of a random number 
+ * Return: Always 0 
+ */
 int main(void)
 {
 	int n;
-        char* comparison_text;
+	char *comparison_text;
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	int reminder = n % 10;
-	if(reminder > 5)
+
+	if (reminder > 5)
 	{
-	    comparison_text = "greater than 5";
+		comparison_text = "greater than 5";
 	}
-	else if(reminder == 0)
+	else if (reminder == 0)
 	{
-	    comparison_text = "is 0";
+		comparison_text = "is 0";
 	}
-	else if(reminder < 6 && reminder > 0)
+	else if (reminder < 6 && reminder > 0)
 	{
-	    comparison_text = "less than 6 and not 0";
+		comparison_text = "less than 6 and not 0";
 	}
+
 	printf("Last digit of %d is %d and %s", n, reminder, comparison_text);
 	return (0);
 }
