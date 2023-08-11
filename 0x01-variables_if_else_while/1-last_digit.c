@@ -12,6 +12,7 @@ int main(void)
 	int n;
 	int reminder;
 	char *comparison_text;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	reminder = n % 10;
@@ -28,6 +29,6 @@ int main(void)
 		comparison_text = "less than 6 and not 0";
 	}
 
-	printf("Last digit of %d is %d and is %s \n", n, reminder, comparison_text);
+	printf("Last digit of %d is %d and is %s\n", n, reminder, comparison_text);
 	return (0);
 }
