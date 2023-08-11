@@ -21,13 +21,13 @@ int main(void)
 	}
 	else if (reminder == 0)
 	{
-		comparison_text = "is 0";
+		comparison_text = "0";
 	}
-	else if (reminder < 6 && reminder > 0)
+	else if (reminder < 6 && reminder != 0)
 	{
 		comparison_text = "less than 6 and not 0";
 	}
 
-	printf("Last digit of %d is %d and %s", n, reminder, comparison_text);
+	printf("Last digit of %d is %d and is %s \n", n, reminder, comparison_text);
 	return (0);
 }
