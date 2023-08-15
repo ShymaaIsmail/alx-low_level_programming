@@ -1,5 +1,11 @@
 #include "main.h"
 
+
+/**
+ * main - print alphabets using _puchar
+ *
+ * Return: Always 0.
+ */
 void print_alphabet(void)
 {
 	char firstChar = 'a';
