@@ -2,8 +2,8 @@
 
 
 /**
- * main - print alphabets using _puchar
- *
+ * print_alphabet - print alphabets using _puchar
+ * Description: prints _putchar
  * Return: Always 0.
  */
 void print_alphabet(void)
