@@ -11,7 +11,7 @@ int main(void)
 {
 	int i;
 
-	for (i = ; i <= 50; i++)
+	for (i = 1; i <= 50; i++)
 	{
 		int n1 = i - 1;
 		int n2 = i - 2;
