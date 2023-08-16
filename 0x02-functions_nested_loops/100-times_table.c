@@ -5,7 +5,6 @@
  * @n: number
  * @limit: max clculation
  */
-
 void multiply_number(int n, int limit)
 {
 	int j;
@@ -18,9 +17,18 @@ void multiply_number(int n, int limit)
 		_putchar(' ');
 		result = n * j;
 		if (result <= 9)
+		{
 			_putchar(' ');
-		else
+		}
+		else if (result >= 10 && result < 100)
+		{
 			_putchar((result / 10) + '0');
+		}
+		else if (result >= 100 && result < 1000)
+		{
+			_putchar((result / 100) + '0');
+			_putchar(((result / 10) % 10) + '0');
+		}
 
 		_putchar((result % 10) + '0');
 	}
@@ -32,7 +40,7 @@ void multiply_number(int n, int limit)
  */
 void print_times_table(int n)
 {
-	if (n > 0 &&  n <= 15)
+	if (n >= 0 &&  n <= 15)
 	{
 		int i;
 
