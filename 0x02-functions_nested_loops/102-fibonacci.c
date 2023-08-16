@@ -38,6 +38,10 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
+		else
+		{
+			printf("\n");
+		}
 	}
 	return (0);
 }
