@@ -11,7 +11,7 @@ int main(void)
 {
 	int i;
 
-	for (i = 0; i < 50; i++)
+	for (i = ; i <= 50; i++)
 	{
 		int n1 = i - 1;
 		int n2 = i - 2;
@@ -25,10 +25,10 @@ int main(void)
 			printf("%d", i);
 		}
 
-		if (i < 49)
+		if (i < 50)
 		{
-			putchar(' ');
 			putchar(',');
+			putchar(' ');
 		}
 	}
 	return (0);
