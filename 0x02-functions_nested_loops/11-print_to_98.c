@@ -8,18 +8,18 @@ void print_to_98(int n)
 {
 	if (n == 98)
 	{
-		_putchar('0' + n);
+		_putchar(n + '0');
 	}
 	else if (n > 98)
 	{
 		while (n >= 98)
 		{
-			_putchar(n);
+			_putchar(n + '0');
 
 			if (n != 98)
 			{
-				_putchar(' ');
 				_putchar(',');
+				_putchar(' ');
 			}
 			n--;
 		}
@@ -28,12 +28,12 @@ void print_to_98(int n)
 	{
 		while (n <= 98)
 		{
-			_putchar(n);
+			_putchar(n + '0');
 
 			if (n != 98)
 			{
-			_putchar(' ');
 			_putchar(',');
+			_putchar(' ');
 			}
 			n++;
 		}
