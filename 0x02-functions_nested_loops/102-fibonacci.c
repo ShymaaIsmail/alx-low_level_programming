@@ -23,7 +23,7 @@ int main(void)
 			long int temp = lastPrinted;
 
 			lastPrinted += beforeLastPrinted;
-			printf("%d", lastPrinted);
+			printf("%ld", lastPrinted);
 			beforeLastPrinted = temp;
 		}
 		else
