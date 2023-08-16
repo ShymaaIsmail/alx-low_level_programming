@@ -15,6 +15,7 @@ void multiply_number(int n, int limit)
 	{
 		_putchar(',');
 		_putchar(' ');
+		_putchar(' ');
 		result = n * j;
 		if (result <= 9)
 			_putchar(' ');
