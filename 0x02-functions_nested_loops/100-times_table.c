@@ -13,19 +13,22 @@ void multiply_number(int n, int limit)
 	for (j = 1; j <= limit; j++)
 	{
 		_putchar(',');
-		_putchar(' ');
-		_putchar(' ');
 		result = n * j;
 		if (result <= 9)
 		{
 			_putchar(' ');
+			_putchar(' ');
+			_putchar(' ');
 		}
 		else if (result >= 10 && result < 100)
 		{
+			_putchar(' ');
+			_putchar(' ');
 			_putchar((result / 10) + '0');
 		}
 		else if (result >= 100 && result < 1000)
 		{
+			_putchar(' ');
 			_putchar((result / 100) + '0');
 			_putchar(((result / 10) % 10) + '0');
 		}
