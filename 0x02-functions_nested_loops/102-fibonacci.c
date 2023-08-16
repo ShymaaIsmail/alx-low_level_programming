@@ -10,8 +10,8 @@
 int main(void)
 {
 	int i;
-	int lastPrinted;
-	int beforeLastPrinted = 0;
+	long int lastPrinted;
+	long int beforeLastPrinted = 0;
 
 	for (i = 1; i <= 50; i++)
 	{
@@ -20,7 +20,7 @@ int main(void)
 
 		if (n1 > 0 && n2 > 0)
 		{
-			int temp = lastPrinted;
+			long int temp = lastPrinted;
 
 			lastPrinted += beforeLastPrinted;
 			printf("%d", lastPrinted);
