@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  *print_to_98 - print numbers from n  untill 98
@@ -8,13 +9,13 @@ void print_to_98(int n)
 {
 	if (n == 98)
 	{
-		_putchar(n + '0');
+		printf("%d\n", n);
 	}
 	else if (n > 98)
 	{
 		while (n >= 98)
 		{
-			_putchar(n + '0');
+			printf("%d", n);
 
 			if (n != 98)
 			{
@@ -23,13 +24,13 @@ void print_to_98(int n)
 			}
 			n--;
 		}
+		printf("\n");
 	}
 	else if (n < 98)
 	{
 		while (n <= 98)
 		{
-			_putchar(n + '0');
-
+			printf("%d", n);
 			if (n != 98)
 			{
 			_putchar(',');
@@ -37,5 +38,6 @@ void print_to_98(int n)
 			}
 			n++;
 		}
+		printf("\n");
 	}
 }
