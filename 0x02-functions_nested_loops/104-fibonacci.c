@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 
 /**
  *main - fibonaci series
@@ -25,7 +26,7 @@ int main(void)
 			long double temp = lastPrinted;
 
 			lastPrinted += beforeLastPrinted;
-			printf("%.0Lf", lastPrinted);
+			printf("%.0Lf", floor(lastPrinted));
 			beforeLastPrinted = temp;
 		}
 		else
