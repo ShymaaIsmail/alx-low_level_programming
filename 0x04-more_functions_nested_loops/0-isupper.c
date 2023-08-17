@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <ctype.h>
 #include "main.h"
 /**
@@ -9,7 +10,7 @@
 int _isupper(int c)
 {
 	char ch = c;
-	int value =  isupper(ch);
+	int value =  isupper(ch) > 0 ? 1 : 0;
 
 	return (value);
 }
