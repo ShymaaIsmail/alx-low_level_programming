@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <ctype.h>
 #include "main.h"
 /**
  * _isupper -main function
@@ -9,7 +10,5 @@ int _isupper(int c)
 {
 	char ch = c;
 	int value =  isupper(ch);
-
-	_putchar(value + '0');
 	return (value);
 }
