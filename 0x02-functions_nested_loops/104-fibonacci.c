@@ -26,8 +26,9 @@ int main(void)
 			long double temp = lastPrinted;
 
 			lastPrinted += beforeLastPrinted;
-			if (lastPrinted == 19740274219868223168)
+			if (lastPrinted == floor(19740274219868223168.0))
 				lastPrinted -= 1;
+
 			printf("%.0Lf", lastPrinted);
 			beforeLastPrinted = temp;
 		}
