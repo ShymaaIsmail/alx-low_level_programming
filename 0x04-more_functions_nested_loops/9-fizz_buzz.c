@@ -22,17 +22,15 @@ int main(void)
 		if ((i % 3) == 0)
 		{
 			printf("Fizz");
-			putchar(' ');
-			continue;
 		}
 		else if ((i % 5) == 0)
 		{
 			printf("Buzz");
-			putchar(' ');
-			continue;
 		}
-		printf("%d", i);
-
+		else
+		{
+			printf("%d", i);
+		}
 		if (i < 100)
 		{
 			putchar(' ');
