@@ -11,6 +11,7 @@ int main(void)
 {
 	int i;
 	long double  lastPrinted;
+
 	long double  beforeLastPrinted = 0;
 
 	for (i = 1; i <= 98; i++)
