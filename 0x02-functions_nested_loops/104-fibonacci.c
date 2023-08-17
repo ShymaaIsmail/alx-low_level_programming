@@ -13,7 +13,7 @@ int main(void)
 	unsigned long  lastPrinted;
 	unsigned long  beforeLastPrinted = 0;
 
-	for (i = 1; i <= 99; i++)
+	for (i = 1; i <= 98; i++)
 	{
 		int n1 = i - 1;
 		int n2 = i - 2;
@@ -33,7 +33,7 @@ int main(void)
 			lastPrinted = i;
 		}
 
-		if (i < 50)
+		if (i < 98)
 		{
 			putchar(',');
 			putchar(' ');
