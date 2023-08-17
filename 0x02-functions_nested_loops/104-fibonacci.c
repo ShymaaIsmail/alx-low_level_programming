@@ -23,7 +23,7 @@ int main(void)
 			long double temp = lastPrinted;
 
 			lastPrinted += beforeLastPrinted;
-			printf("%L.0f", lastPrinted);
+			printf("%.0Lf", lastPrinted);
 			beforeLastPrinted = temp;
 		}
 		else
