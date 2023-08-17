@@ -10,6 +10,7 @@
 int main(void)
 {
 	int i;
+
 	long double  lastPrinted;
 
 	long double  beforeLastPrinted = 0;
