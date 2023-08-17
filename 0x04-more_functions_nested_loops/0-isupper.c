@@ -10,5 +10,6 @@ int _isupper(int c)
 {
 	char ch = c;
 	int value =  isupper(ch);
+
 	return (value);
 }
