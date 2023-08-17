@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-#include <cType.h>
+#include <ctype.h>
 
 /**
  * _isdigit - checkes an iput is a digit or not
