@@ -31,7 +31,7 @@ printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
 else
 {
 printf("Day of the year: %d\n", day);
-if (year % 4 == 0)
+if ((year % 4 == 0 || year % 400 == 0))
 {
 	printf("Remaining days: %d\n", 366 - day);
 }
