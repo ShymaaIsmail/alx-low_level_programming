@@ -32,7 +32,7 @@ else
 {
 if ((year % 4 == 0 || year % 400 == 0))
 {
-if (year % 400 == 0 && month >= 2 && day >= 60)
+if (year % 400 == 0 && month == 12 && day == 365)
 {
 day++;
 }
