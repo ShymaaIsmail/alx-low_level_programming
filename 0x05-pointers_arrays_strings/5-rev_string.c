@@ -11,7 +11,8 @@
 void rev_string(char *s)
 {
 	int i, j;
-	int length = strlen(s);
+	int length = 0;
+	length = strlen(s);
 	char copy[length]= *s;
 
 	strcpy(copy, s);
