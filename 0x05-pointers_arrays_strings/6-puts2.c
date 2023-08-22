@@ -18,7 +18,8 @@ void puts2(char *str)
 		if (i % 2 == 0)
 		{
 			char *temp = &str[i];
-			puts(temp);
+			_putchar(temp[0]);
 		}
 	}
+	printf("\n");
 }
