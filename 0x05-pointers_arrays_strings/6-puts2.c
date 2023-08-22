@@ -11,13 +11,14 @@
 void puts2(char *str)
 {
 	int i;
-	int length = strlen(s);
+	int length = strlen(str);
 
 	for (i = 0; i < length; i++)
 	{
 		if (i % 2 == 0)
 		{
-			puts(str[i]);
+			char *temp = &str[i];
+			puts(temp);
 		}
 	}
 }
