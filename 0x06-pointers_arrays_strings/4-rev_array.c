@@ -14,9 +14,11 @@ void reverse_array(int *a, int n)
 	int i;
 	int j;
 	int mid_array = n % 2 == 0 ? (n / 2) : ((n - 1) / 2);
+
 	for (i = 0, j = n - 1; i < mid_array ; i++, j--)
 	{
 		int temp = a[i];
+
 		a[i] = a[j];
 		a[j] = temp;
 	}
