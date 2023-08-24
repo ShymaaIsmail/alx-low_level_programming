@@ -11,7 +11,7 @@
 
 int is_separator_char(char c)
 {
-	int retValue;
+	int retValue = 0;
 	int i;
 	char arr[13] = {' ', '\t', '\n', ',', ';', '.',
 			'!', '?', '\"', '(', ')', '{', '}'};
@@ -40,11 +40,12 @@ char *cap_string(char *s)
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-		if (is_separator_char(s[i - 1]))
-		{
-			s[i] = s[i] - 32;
-		}
-		else if (i == 0)
+		if (i == 0)
+                {
+                        s[i] = s[i] - 32;
+			continue;
+                }
+		else if (is_separator_char(s[i - 1]) == 1)
 		{
 			s[i] = s[i] - 32;
 		}
