@@ -27,7 +27,7 @@ int is_separator_char(char c)
 }
 
 /**
- *string_toupper  - conver chars to upper case
+ *cap_string  - conver chars to upper case
  *@s: pointer to string
  *Return: pointer toupper case string
  */
@@ -38,16 +38,16 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i] != '\0' ; i++)
 	{
-		if (is_separator_char(s[i]))
+		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			if (s[i + 1] != '\0' && !is_separator_char(s[i + 1]))
-                        {
-                                s[i + 1] = toupper(s[i + 1]);
-                        }
+		if (is_separator_char(s[i - 1]))
+		{
+			s[i] = s[i] - 32;
 		}
 		else if (i == 0)
 		{
-			s[i] = toupper(s[i]);
+			s[i] = s[i] - 32;
+		}
 		}
 	}
 	return (s);
