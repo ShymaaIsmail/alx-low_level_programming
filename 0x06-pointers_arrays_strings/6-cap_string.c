@@ -41,10 +41,10 @@ char *cap_string(char *s)
 		if (s[i] >= 'a' && s[i] <= 'z')
 		{
 		if (i == 0)
-                {
-                        s[i] = s[i] - 32;
+		{
+			s[i] = s[i] - 32;
 			continue;
-                }
+		}
 		else if (is_separator_char(s[i - 1]) == 1)
 		{
 			s[i] = s[i] - 32;
