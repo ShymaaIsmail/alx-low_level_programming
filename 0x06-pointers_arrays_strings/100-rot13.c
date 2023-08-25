@@ -16,6 +16,7 @@ char *rot13(char *s)
 	int i, l;
 	int codes_length = strlen(codes);
 
+	printf("ddd %d", codes_length);
 	for (i = 0; s[i] != '\0' ; i++)
 	{
 		for (l = 0; l < codes_length; l++)
@@ -23,6 +24,7 @@ char *rot13(char *s)
 			if (s[i] == letters[l])
 			{
 				s[i] = codes[l];
+				break;
 			}
 		}
 	}
