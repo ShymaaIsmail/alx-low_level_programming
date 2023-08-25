@@ -14,10 +14,11 @@ char *rot13(char *s)
 	char *letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *codes = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i, l;
+	int codes_length = strlen(codes);
 
 	for (i = 0; s[i] != '\0' ; i++)
 	{
-		for (l = 0; l < 10; l++)
+		for (l = 0; l < codes_length; l++)
 		{
 			if (s[i] == letters[l])
 			{
