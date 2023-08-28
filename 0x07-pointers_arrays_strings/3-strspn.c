@@ -17,18 +17,17 @@ unsigned int _strspn(char *s, char *accept)
 
 	if (s != NULL)
 	{
-	int i;
+	int i, j;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (j = 0; accept[j] != '\0'; j++)
 	{
-		if (s[i] == accept[0])
+		for (i = 0; s[i] != '\0'; i++)
+		{
+		if (s[i] == accept[j])
 		{
 			inital_bytes_count  = i + 1;
 			break;
 		}
-		else if (s[i] == 32)
-		{
-			break;
 		}
 	}
 	}
