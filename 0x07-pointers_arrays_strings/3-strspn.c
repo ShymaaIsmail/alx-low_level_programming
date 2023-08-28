@@ -26,7 +26,6 @@ unsigned int _strspn(char *s, char *accept)
 		if (s[i] == accept[j])
 		{
 			inital_bytes_count++;
-			break;
 		}
 		}
 	}
