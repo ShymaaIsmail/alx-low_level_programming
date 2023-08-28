@@ -24,6 +24,11 @@ char *_strchr(char *s, char c)
 			ret_occurance = &s[i];
 			break;
 		}
+		else if (c == '\0')
+		{
+			ret_occurance = s;
+			break;
+		}
 	}
 	}
 	return (ret_occurance);
