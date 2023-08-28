@@ -13,11 +13,12 @@
 char *_strchr(char *s, char c)
 {
 	char *ret_occurance = NULL;
+
 	if (s != NULL)
 	{
 	int i;
 
-	if (c == NULL)
+	if (c == '\0')
 	{
 		ret_occurance = s;
 	}
