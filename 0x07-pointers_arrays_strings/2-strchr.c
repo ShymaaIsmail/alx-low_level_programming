@@ -20,15 +20,15 @@ char *_strchr(char *s, char c)
 
 	if (c == '\0')
 	{
-		ret_occurance = NULL;
+		ret_occurance = s;
 	}
-	else
+	else 
 	{
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
 		{
-			ret_occurance = &s[i + 1];
+			ret_occurance = &s[i];
 			break;
 		}
 	}
