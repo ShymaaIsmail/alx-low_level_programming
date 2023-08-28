@@ -28,7 +28,7 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			ret_occurance = &s[i];
+			ret_occurance = &s[i + 1];
 			break;
 		}
 	}
