@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 
 	if (c == '\0')
 	{
-		ret_occurance = s;
+		ret_occurance = NULL;
 	}
 	else
 	{
