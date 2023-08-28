@@ -19,7 +19,7 @@ char *_strpbrk(char *s, char *accept)
 
 	if (s != NULL)
 	{
-	int i,j;
+	int i, j;
 
 	if (accept == NULL)
 	{
