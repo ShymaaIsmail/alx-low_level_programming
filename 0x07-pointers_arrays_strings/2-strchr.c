@@ -22,7 +22,7 @@ char *_strchr(char *s, char c)
 	{
 		ret_occurance = s;
 	}
-	else 
+	else
 	{
 	for (i = 0; s[i] != '\0'; i++)
 	{
