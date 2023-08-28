@@ -26,6 +26,10 @@ unsigned int _strspn(char *s, char *accept)
 			inital_bytes_count  = i + 1;
 			break;
 		}
+		else if (s[i] == 32)
+		{
+			break;
+		}
 	}
 	}
 	return (inital_bytes_count);
