@@ -17,6 +17,12 @@ char *_strchr(char *s, char c)
 	{
 	int i;
 
+	if (c == NULL)
+	{
+		ret_occurance = s;
+	}
+	else
+	{
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
@@ -24,11 +30,7 @@ char *_strchr(char *s, char c)
 			ret_occurance = &s[i];
 			break;
 		}
-		else if (c == '\0')
-		{
-			ret_occurance = s;
-			break;
-		}
+	}
 	}
 	}
 	return (ret_occurance);
