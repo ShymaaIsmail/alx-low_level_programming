@@ -12,9 +12,9 @@ void _puts_recursion(char *s)
 {
 	char *remaning_text = s + 1;
 
-	if (strlen(s) > 0) 
+	if (strlen(s) > 0)
 	{
-        	_putchar(*s);
+		_putchar(*s);
 		_puts_recursion(remaning_text);
 	}
 	else
