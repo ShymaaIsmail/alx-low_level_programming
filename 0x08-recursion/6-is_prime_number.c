@@ -12,7 +12,7 @@ int iterator(int i, int number)
 {
 	int is_prime = 0;
 
-	if (number <= 1 || n % i == 0)
+	if (number <= 1 || number % i == 0)
 	{
 		is_prime = 0;
 	}
