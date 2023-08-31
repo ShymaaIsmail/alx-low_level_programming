@@ -2,6 +2,25 @@
 #include <string.h>
 #include "main.h"
 
+
+/**
+ *iterator - returns 1 if a string is a palindrome and 0 if not.
+ *@s: string to check
+ * @i: first index
+ *@j: last index
+ *Return: i or zero.
+ */
+int iterator(char *s, int i, int j)
+{
+	if (i >= j)
+		return (1);
+
+	if (s[i] != s[j])
+		return (0);
+
+	return (iterator(s, ++i, --j));
+}
+
 /**
  *is_palindrome - returns 1 if a string is a palindrome and 0 if not.
  *@s: string to check
@@ -11,19 +30,7 @@ int is_palindrome(char *s)
 {
 	int is_plain = 0;
 	int length = strlen(s);
-	int i, j;
 
-	for (i = 0, j = length - 1; i < length / 2; i++, j--)
-	{
-		if (s[i] == s[j])
-		{
-			is_plain = 1;
-		}
-		else
-		{
-			is_plain = 0;
-			break;
-		}
-	}
+	is_plain = iterator(s, 0, length - 1);
 	return (is_plain);
 }
