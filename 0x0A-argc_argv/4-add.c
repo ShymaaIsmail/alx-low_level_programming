@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		{
 			printf("Error");
 			printf("\n");
-			return (0);
+			return (1);
 		}
 		else
 		{
