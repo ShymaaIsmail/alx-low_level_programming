@@ -17,8 +17,8 @@ int iterator(char *s1, char *s2)
 		return (iterator(s1 + 1, s2 + 1));
 	if (*s2 == '*')
 	{
-		return ((s1 != 0 && iterator(s1 + 1, s2))
-			|| (s2 != 0 && iterator(s1, s2 + 1)));
+		return ((*s1 != 0 && iterator(s1 + 1, s2))
+			|| (*s2 != 0 && iterator(s1, s2 + 1)));
 	}
 	return (0);
 }
