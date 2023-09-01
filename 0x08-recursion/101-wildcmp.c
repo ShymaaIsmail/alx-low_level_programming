@@ -6,11 +6,16 @@
 /**
  *iterator - returns 1 if a string is a palindrome and 0 if not.
  *@s1: first string to check
- *@s2: second string 
+ *@s2: second string
  *Return: i or zero.
  */
 int iterator(char *s1, char *s2)
 {
+	if (*s1 == 0 && *s2 == 0)
+		return 1;
+	if (*s1 == *s2)
+		return (iterator(s1 + 1, s2 + 1));
+		
 	return (iterator(s1, s2));
 }
 
@@ -24,6 +29,9 @@ int wildcmp(char *s1, char *s2)
 {
 	int is_identical = 0;
 
-	is_identical = iterator(s1, s2);
+	if (strlen(s1) == 0 || strlen(s2) == 0)
+		is_identical = 0;
+	else
+		is_identical = iterator(s1, s2);
 	return (is_identical);
 }
