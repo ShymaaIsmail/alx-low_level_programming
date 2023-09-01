@@ -33,7 +33,7 @@ int wildcmp(char *s1, char *s2)
 {
 	int is_identical = 0;
 
-	if (strlen(s1) == 0 || strlen(s2) == 0)
+	if (strlen(s1) == 0 && *s2 != '*')
 		is_identical = 0;
 	else
 		is_identical = iterator(s1, s2);
