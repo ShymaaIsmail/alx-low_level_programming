@@ -11,12 +11,6 @@
  */
 int iterator(char *s1, char *s2)
 {
-	if (i >= j)
-		return (1);
-
-	if (s[i] != s[j])
-		return (0);
-
 	return (iterator(s1, s2));
 }
 
