@@ -16,7 +16,7 @@ int iterator(char *s1, char *s2)
 	if (*s1 == *s2)
 		return (iterator(s1 + 1, s2 + 1));
 		
-	return (iterator(s1, s2));
+	return 0;
 }
 
 /**
