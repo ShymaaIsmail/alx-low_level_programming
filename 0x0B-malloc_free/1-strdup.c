@@ -25,6 +25,7 @@ char *_strdup(char *str)
 	else
 	{
 	char *str_new_start = str_new;
+
 	while (*str !=  '\0')
 	{
 		*str_new = *str;
