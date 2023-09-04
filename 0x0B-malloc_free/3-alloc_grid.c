@@ -25,13 +25,29 @@ int **alloc_grid(int width, int height)
 	}
 	else
 	{
-		int i = 0;
-		while (i < width)
+		int col_index = 0;
+
+		while (col_index < width)
 		{
-			matrix[i] = (int *)malloc(sizeof(int) * height);
-			i++;
+			matrix[col_index] = (int *)malloc(sizeof(int) * height);
+			if (matrix[col_index] == NULL)
+			{
+				int row_index = 0;
+
+				while (row_index < col_index)
+				{
+					free(matrix[row_index]);
+					row_index++;
+				}
+				free(matrix);
+				return (NULL);
+			}
+			else
+			{
+				col_index++;
+			}
 		}
-       		return (matrix);
+		return (matrix);
 	}
 	}
 }
