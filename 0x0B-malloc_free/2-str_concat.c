@@ -10,11 +10,15 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *str_new = (char *)malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
-	char *str_new_start = str_new;
+	char *str_new;
+	char *str_new_start;
 
 	s1 = (s1 == NULL) ? "" : s1;
 	s2 = (s2 == NULL) ? "" : s2;
+
+	str_new = (char *)malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+	str_new_start = str_new;
+
 	if (str_new == NULL)
 	{
 		return (NULL);
