@@ -18,6 +18,9 @@ void free_grid(int **grid, int height)
 		while (row_index < 0)
 		{
 			free(grid[row_index]);
+			grid[row_index] = NULL;
+			row_index++;
 		}
+		free(grid);
 	}
 }
