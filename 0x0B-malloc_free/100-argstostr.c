@@ -19,11 +19,12 @@ char *argstostr(int ac, char **av)
 	}
 	else
 	{
+
 	for (arg_index = 0; arg_index < ac; arg_index++)
 	{
 		int arg_length = strlen(av[arg_index]);
 
-		total_chars_length += arg_length;
+		total_chars_length += arg_length + 1;
 	}
 	full_args_str = (char *)malloc(sizeof(char) * (total_chars_length + 1));
 	if (full_args_str != NULL)
