@@ -22,15 +22,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		for (i = 0; s1[i] != 0; i++)
 			{
-				new_string = *s1[i];
+				new_string = s1[i];
 				new_string++;
 			}
 		for (i = 0; i < n; i++)
 			{
-				new_string = *s2[i];
+				new_string = s2[i];
 				new_string++;
 			}
-		new_string = '/0';
+		new_string = '\0';
 	}
 	return (new_string);
 }
