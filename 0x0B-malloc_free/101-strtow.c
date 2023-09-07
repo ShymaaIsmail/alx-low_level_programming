@@ -4,9 +4,9 @@
 #include <ctype.h>
 
 /**
- * count_words - Counts the number of words in a string.
+ * count_words - count number of words in a string
  * @str: The input string.
- * Return: The number of words.
+ * Return: words count
  */
 int count_words(char *str)
 {
@@ -24,10 +24,10 @@ int count_words(char *str)
 }
 
 /**
- * allocate_memory - Allocates memory for the string array.
- * @words_count: The number of words.
- * @str_length: The length of the input string.
- * Return: The pointer to the allocated memory.
+ * allocate_memory - allocates memory for the array.
+ * @words_count: number of words.
+ * @str_length: total length of a string.
+ * Return: pointer to the allocated memory.
  */
 char **allocate_memory(int words_count, int str_length)
 {
@@ -64,10 +64,10 @@ char **allocate_memory(int words_count, int str_length)
 }
 
 /**
- * extract_words - Extracts words from the input string and stores them in the array.
- * @str: The input string.
- * @array: The string array to store the words.
- * @words_count: The number of words.
+ * extract_words - extracts words from a string and put them in an array.
+ * @str: string.
+ * @array: an array to put the words.
+ * @words_count: words count
  */
 void extract_words(char *str, char **array, int words_count)
 {
@@ -92,9 +92,9 @@ void extract_words(char *str, char **array, int words_count)
 }
 
 /**
- * strtow - Splits a string into words.
- * @str: The input string.
- * Return: The pointer to the array of words.
+ * strtow - divide a string into words.
+ * @str: string
+ * Return: pointer to the array of words.
  */
 char **strtow(char *str)
 {
