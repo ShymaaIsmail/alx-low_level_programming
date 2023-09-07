@@ -10,7 +10,13 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *array = (void*) malloc(nmemb * size);
+	if (size == 0 || nmemb == 0)
+		return (NULL);
+	else
+	{
+		void *array = (void*) malloc(nmemb * size);
+		return (array);
+	}
 
-  return (array);
+
 }
