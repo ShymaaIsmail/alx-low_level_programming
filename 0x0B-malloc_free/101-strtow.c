@@ -11,7 +11,7 @@
 int count_words(char *str)
 {
     int c, words_count = 0, str_length = strlen(str);
-    
+
     for (c = 0; c < str_length; c++)
     {
         if (isspace(str[c]))
@@ -19,7 +19,7 @@ int count_words(char *str)
             words_count++;
         }
     }
-    
+
     return words_count;
 }
 
@@ -35,31 +35,31 @@ char **allocate_memory(int words_count, int str_length)
     int w, i;
 
     array = (char **)malloc(sizeof(char *) * (words_count + 1));
-    
+
     if (array == NULL)
     {
         return NULL;
     }
-    
+
     for (w = 0; w < words_count; w++)
     {
         array[w] = (char *)malloc(sizeof(char) * (str_length + 1));
-        
+
         if (array[w] == NULL)
         {
             for (i = 0; i < w; i++)
             {
                 free(array[i]);
             }
-            
+
             free(array);
-            
+
             return NULL;
         }
     }
-    
+
     array[words_count] = NULL;
-    
+
     return array;
 }
 
@@ -67,10 +67,11 @@ char **allocate_memory(int words_count, int str_length)
  * extract_words - Extracts words from the input string and stores them in the array.
  * @str: The input string.
  * @array: The string array to store the words.
+ * @words_count: The number of words.
  */
 void extract_words(char *str, char **array, int words_count)
 {
-	int w_c_index = 0, c = 0, w;
+    int w_c_index = 0, c = 0, w;
 
     for (w = 0; w < words_count; w++)
     {
@@ -98,23 +99,24 @@ void extract_words(char *str, char **array, int words_count)
 char **strtow(char *str)
 {
     char **array;
-    int words_count = 0, str_length = strlen(str);
-    
+    int words_count = 0, str_length;
+
     if (str == NULL || str[0] == '\0')
     {
         array = NULL;
     }
     else
     {
+        str_length = strlen(str);
         words_count = count_words(str);
-        
+
         array = allocate_memory(words_count, str_length);
-        
+
         if (array != NULL)
         {
             extract_words(str, array, words_count);
         }
     }
-    
+
     return array;
 }
