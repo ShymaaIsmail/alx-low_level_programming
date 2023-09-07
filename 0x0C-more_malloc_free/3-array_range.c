@@ -24,7 +24,7 @@ if (array != NULL)
 
       for (i = 0; i < ((max - min) + 1); i++)
         {
-						array[i] = i + 1;
+		array[i] = i + min;
       }
     }
     return (array);
