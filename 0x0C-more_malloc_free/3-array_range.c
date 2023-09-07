@@ -16,7 +16,7 @@ int *array_range(int min, int max)
   }
   else
   {
-    int *array = calloc(sizeof(int) * ((max - min) + 1));
+    int *array = calloc(((max - min) + 1), sizeof(int));
 
     if (array != NULL)
     {
