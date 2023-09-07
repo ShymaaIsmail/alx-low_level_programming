@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			new_string[j + i] = s2[j];
 		}
-		new_string[j] = '\0';
+		new_string[i + j] = '\0';
 	}
 	return (new_string);
 }
