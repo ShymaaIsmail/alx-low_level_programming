@@ -20,6 +20,12 @@ int *array = calloc(((max - min) + 1), sizeof(int));
 
 if (array != NULL)
     {
+      int i;
+
+      for (i = 0; i < ((max - min) + 1); i++)
+        {
+						array[i] = i + 1;
+      }
     }
     return (array);
   }
