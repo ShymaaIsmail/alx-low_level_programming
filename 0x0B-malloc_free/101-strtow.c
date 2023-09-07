@@ -70,24 +70,23 @@ char **allocate_memory(int words_count, int str_length)
  */
 void extract_words(char *str, char **array, int words_count)
 {
-    int w_c_index = 0, c = 0, w;
-    
+	int w_c_index = 0, c = 0, w;
+
     for (w = 0; w < words_count; w++)
     {
-    for (; str[c] != '\0'; c++)
-    {
-        if (!isspace(str[c]))
+        while (isspace(str[c]))
+        {
+            c++;
+        }
+
+        for (; str[c] != '\0' && !isspace(str[c]); c++)
         {
             array[w][w_c_index] = str[c];
             w_c_index++;
         }
-        else
-        {
-            array[w][w_c_index] = '\0';
-            w++;
-            w_c_index = 0;
-        }
-    }
+
+        array[w][w_c_index] = '\0';
+        w_c_index = 0;
     }
 }
 
