@@ -11,12 +11,14 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	if (size == 0 || nmemb == 0)
+	{
 		return (NULL);
+	}
 	else
 	{
-		void *array = (void*) malloc(nmemb * size);
+		void *array = (void *) malloc(nmemb * size);
 
-		if (array != NULL) 
+		if (array != NULL)
 			memset(array, 0, nmemb * size);
 
 		return (array);
