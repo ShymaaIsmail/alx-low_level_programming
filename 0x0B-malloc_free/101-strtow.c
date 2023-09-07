@@ -10,18 +10,28 @@
  */
 int count_words(char *str)
 {
-    int c, words_count = 0, str_length = strlen(str);
-
-    for (c = 0; c < str_length; c++)
+	int c, words_count = 0, str_length = strlen(str);
+	int current_word = 0;
+	for (c = 0; c < str_length; c++)
     {
         if (isspace(str[c]))
         {
-            words_count++;
+          current_word = 0;
         }
+	else
+	{
+		if (!current_word)
+		{
+			current_word = 1;
+			words_count++;
+		}
+	}
     }
 
     return words_count;
 }
+
+
 
 /**
  * allocate_memory - allocates memory for the array.
