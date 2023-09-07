@@ -4,58 +4,118 @@
 #include <ctype.h>
 
 /**
- *strtow  - concatenates two strings
- *@str: str
- *Return: pointer to the concatenated string
+ * count_words - Counts the number of words in a string.
+ * @str: The input string.
+ * Return: The number of words.
+ */
+int count_words(char *str)
+{
+    int c, words_count = 0, str_length = strlen(str);
+    
+    for (c = 0; c < str_length; c++)
+    {
+        if (isspace(str[c]))
+        {
+            words_count++;
+        }
+    }
+    
+    return words_count;
+}
+
+/**
+ * allocate_memory - Allocates memory for the string array.
+ * @words_count: The number of words.
+ * @str_length: The length of the input string.
+ * Return: The pointer to the allocated memory.
+ */
+char **allocate_memory(int words_count, int str_length)
+{
+    char **array;
+    int w, i;
+
+    array = (char **)malloc(sizeof(char *) * (words_count + 1));
+    
+    if (array == NULL)
+    {
+        return NULL;
+    }
+    
+    for (w = 0; w < words_count; w++)
+    {
+        array[w] = (char *)malloc(sizeof(char) * (str_length + 1));
+        
+        if (array[w] == NULL)
+        {
+            for (i = 0; i < w; i++)
+            {
+                free(array[i]);
+            }
+            
+            free(array);
+            
+            return NULL;
+        }
+    }
+    
+    array[words_count] = NULL;
+    
+    return array;
+}
+
+/**
+ * extract_words - Extracts words from the input string and stores them in the array.
+ * @str: The input string.
+ * @array: The string array to store the words.
+ */
+void extract_words(char *str, char **array, int words_count)
+{
+    int w_c_index = 0, c = 0, w;
+    
+    for (w = 0; w < words_count; w++)
+    {
+    for (; str[c] != '\0'; c++)
+    {
+        if (!isspace(str[c]))
+        {
+            array[w][w_c_index] = str[c];
+            w_c_index++;
+        }
+        else
+        {
+            array[w][w_c_index] = '\0';
+            w++;
+            w_c_index = 0;
+        }
+    }
+    }
+}
+
+/**
+ * strtow - Splits a string into words.
+ * @str: The input string.
+ * Return: The pointer to the array of words.
  */
 char **strtow(char *str)
 {
-	char **array;
-	int c, w, words_count = 0, char_length = 0, str_length = 0;
-
-	if (str == NULL || str[0] == '\0')
-	{
-		array = NULL;
-	}
-	else
-	{
-		str_length = strlen(str);
-		for (c = 0; c < str_length; c++)
-		{
-			if (isspace(str[c]))
-			{
-				words_count++;
-			}
-			else
-			{
-				char_length++;
-			}
-		}
-		array = (char **)malloc(sizeof(char *) * (words_count + 1));
-		if (array != NULL)
-		{
-		for (w = 0; w < words_count; w++)
-		{
-			int w_c_index = 0;
-
-			array[w] = (char *)malloc(sizeof(char) * (str_length + 1));
-			if (array[w] != NULL)
-			{
-			for (c = 0; c < str_length; c++)
-			{
-				if (!isspace(str[c]))
-				{
-					array[w][w_c_index] = str[c];
-					w_c_index++;
-				}
-				else
-					break;
-			}
-			array[w][w_c_index] = '\0';
-			}
-		}
-		array[words_count] = NULL;
-		}
-	}
-	return (array);
+    char **array;
+    int words_count = 0, str_length = strlen(str);
+    
+    if (str == NULL || str[0] == '\0')
+    {
+        array = NULL;
+    }
+    else
+    {
+        words_count = count_words(str);
+        
+        array = allocate_memory(words_count, str_length);
+        
+        if (array != NULL)
+        {
+            extract_words(str, array, words_count);
+        }
+    }
+    
+    return array;
 }
