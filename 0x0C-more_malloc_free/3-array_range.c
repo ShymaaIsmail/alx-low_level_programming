@@ -10,4 +10,18 @@
  */
 int *array_range(int min, int max)
 {
+  if (min > max)
+  {
+    return (NULL);
+  }
+  else
+  {
+    int *array = calloc(sizeof(int) * ((max - min) + 1));
+
+    if (array != NULL)
+    {
+      
+    }
+    return (array);
+  }
 }
