@@ -120,12 +120,19 @@ char **strtow(char *str)
         str_length = strlen(str);
         words_count = count_words(str);
 
+	if (words_count > 0)
+	{
         array = allocate_memory(words_count, str_length);
 
         if (array != NULL)
         {
             extract_words(str, array, words_count);
         }
+	}
+	else
+	{
+		array = NULL;
+	}
     }
 
     return array;
