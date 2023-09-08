@@ -6,13 +6,14 @@
  *_realloc - reallocates a memory block using malloc and free
  *@old_size: old ptr size
  *@new_size: new ptr size
+ *@ptr: ptr
  *Return: returns a newly allocated space, in the range from the start
  *of ptr up to the minimum of the old and new sizes
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *new_ptr;
-	unsigned int initializtion_size = 0, i = 0;
+	unsigned int initializtion_size = 0;
 
 	if (new_size == old_size)
 	{
@@ -20,11 +21,19 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	else
 	{
+		if (new_size == 0 && ptr != NULL)
+		{
+			new_ptr = NULL;
+			free(ptr);
+		}
+		else
+		{
 		initializtion_size = (old_size < new_size) ? old_size : new_size;
 		new_ptr = malloc(new_size);
-		for (i = 0; i < initializtion_size; i++)
+		if (ptr != NULL && new_ptr != NULL)
 		{
-			new_ptr[i] = ptr[i];
+			memcpy(new_ptr, ptr, initializtion_size);
+		}
 		}
 	}
 	return (new_ptr);
