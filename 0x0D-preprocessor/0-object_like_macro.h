@@ -1,5 +1,4 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
+#ifndef _object_like_macro_
+#define _object_like_macro_
 #define SIZE 1024
-int _putchar(char c);
 #endif
