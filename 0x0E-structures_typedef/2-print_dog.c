@@ -17,7 +17,7 @@ else
 {
 printf("Name: (nil)\n");
 }
-if (d->age != 0.0)
+if (d->age > 0)
 {
 printf("Age: %.6f\n", d->age);
 }
