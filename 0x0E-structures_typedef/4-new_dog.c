@@ -6,7 +6,7 @@
 *new_dog - creates a new instance of the dog
 *@name: name
 *@age: age
-*owner: owner
+*@owner: owner
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
