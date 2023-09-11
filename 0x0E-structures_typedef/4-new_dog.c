@@ -18,11 +18,19 @@ if (baby_dog != NULL)
 char *name_copy = malloc(sizeof(char) * strlen(name));
 char *owner_copy = malloc(sizeof(char) * strlen(owner));
 
+if (name_copy != NULL && owner_copy != NULL)
+{
 strcpy(name_copy, name);
 strcpy(owner_copy, owner);
 baby_dog->name = name_copy;
 baby_dog->age = age;
 baby_dog->owner = owner_copy;
+}
+else
+{
+free(baby_dog);
+baby_dog = NULL;
+}
 }
 return (baby_dog);
 }
