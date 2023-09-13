@@ -30,6 +30,10 @@ else
 {
 free(baby_dog);
 baby_dog = NULL;
+free(name_copy);
+free(owner_copy);
+name_copy = NULL;
+owner_copy = NULL;
 }
 }
 return (baby_dog);
