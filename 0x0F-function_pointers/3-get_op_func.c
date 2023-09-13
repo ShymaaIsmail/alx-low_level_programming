@@ -17,12 +17,13 @@ op_t ops[] = {
 {"%", op_mod},
 {NULL, NULL}
 };
-int i;
+int i = 0;
+
 while (i < 6)
 {
 if (ops[i].op == s)
 {
-	return (&ops[i].f);
+return (&ops[i].f);
 }
 i++;
 }
