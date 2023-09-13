@@ -12,8 +12,24 @@
 int int_index(int *array, int size, int (*cmp)(int))
 {
 int index_to_return = -1;
-if (size > 0)
+int item;
+
+if (size > 0 && array != NULL && comp != NULL)
 {
+for (item = 0; item < size; item++)
+{
+int comparison_result = comp(array[item]);
+
+if (comparison_result > 0)
+{
+index_to_return = item;
+break;
+}
+else
+{
+index_to_return = -1;
+}
+}
 }
 return (index_to_return);
 }
