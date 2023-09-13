@@ -18,7 +18,7 @@ if (size > 0 && array != NULL && cmp != NULL)
 {
 for (item = 0; item < size; item++)
 {
-int comparison_result = comp(array[item]);
+int comparison_result = cmp(array[item]);
 
 if (comparison_result > 0)
 {
