@@ -42,15 +42,31 @@ int op_mul(int a, int b)
         return (result);
 }
 
+/**
+ * op_div - divide 2 numbers
+ * @a: first integr operand
+ * @b: second integer operand
+ * Return: returns the division result of the 2 integer variables
+ */
 int op_div(int a, int b)
 {
         int result;
+
+	result = a / b;
         return (result);
 }
 
+/**
+ * op_mod - calculate modulus of 2 numbers
+ * @a: first integr operand
+ * @b: second integer operand
+ * Return: returns the modulus reminder of the 2 integer variables
+ */
 int op_mod(int a, int b)
 {
-        int result;
-        return (result);
+	int result;
+
+	result = a % b;
+	return (result);
 }
 
