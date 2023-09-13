@@ -22,10 +22,10 @@ int op_add(int a, int b)
  */
 int op_sub(int a, int b)
 {
-        int result;
+	int result;
 
 	result = a - b;
-        return (result);
+	return (result);
 }
 
 /**
