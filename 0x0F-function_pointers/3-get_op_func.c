@@ -20,7 +20,7 @@ int i = 0;
 
 while (i < 6)
 {
-if (ops[i].op == s)
+if (*(ops[i].op) == *s && *(s + 1) == NULL)
 {
 return (&ops[i].f);
 }
