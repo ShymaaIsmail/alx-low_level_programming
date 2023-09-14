@@ -3,23 +3,6 @@
 #include <stdarg.h>
 
 /**
- *_print_one_string - print string using recursion
- *@s: string
- *Return: nothing
- */
-void _print_one_string(const char *s)
-{
-        char *remaning_text = (char *)s + 1;
-
-        if (strlen(s) > 0)
-        {
-                putchar((int)*s);
-                _print_one_string(remaning_text);
-        }
-}
-
-
-/**
  *print_strings -  prints arguments with separator if exits
  *@separator: separator between printed numbers
  *@n: number of arguments
@@ -53,6 +36,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			}
 		}
 		va_end(last_fixed_arg_ptr);
-		_putchar("\n");
+		printf("\n");
 		}
 }
