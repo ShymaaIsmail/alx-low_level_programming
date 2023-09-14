@@ -3,13 +3,15 @@
 #include "3-calc.h"
 
 /**
- * main - entry point for task 3 in project 
- * 0x0F-pointers_to_functions
- *
+ * main - entry point for task 3 in project
+ *0x0F-pointers_to_functions
+ *@argc: args count
+ *@argv: arguments list
  * Return: Always 0.
  */
 int main(int argc, char *argv[]) {
-if (argc != 4) {
+if (argc != 4)
+{
 printf("Error\n");
 exit(98);
 return (98);
@@ -26,7 +28,8 @@ return (100);
 }
 int (*operation_func)(int, int) = get_op_func(operator);
 
-if (operation_func == NULL) {
+if (operation_func == NULL)
+{
 printf("Error\n");
 exit(99);
 return (99);
@@ -34,5 +37,5 @@ return (99);
 int result = operation_func(num1, num2);
 
 printf("%d\n", result);
-return 0;
+return (0);
 }
