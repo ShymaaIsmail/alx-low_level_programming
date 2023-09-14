@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "3-calc.h"
 
 /**
  * get_op_fun - select the appropriate function based on th s operator
@@ -20,7 +21,7 @@ int i = 0;
 
 while (i < 6)
 {
-if (*(ops[i].op) == *s && *(s + 1) == NULL)
+if (*(ops[i].op) == *s && *(s + 1) == '/0')
 {
 return (&ops[i].f);
 }
