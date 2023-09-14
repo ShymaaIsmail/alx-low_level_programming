@@ -9,7 +9,8 @@
  *@argv: arguments list
  * Return: Always 0.
  */
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
 if (argc != 4)
 {
 printf("Error\n");
