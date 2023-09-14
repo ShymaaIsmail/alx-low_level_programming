@@ -1,23 +1,6 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
-/**
- *_print_one_string - print string using recursion
- *@s: string
- *Return: nothing
- */
-void _print_one_string(const char *s)
-{
-	char *remaning_text = (char *)s + 1;
-
-	if (strlen(s) > 0)
-	{
-		putchar((int)*s);
-		_print_one_string(remaning_text);
-	}
-}
 
 /**
  *print_numbers -  prints arguments with separator if exits
@@ -38,13 +21,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			int num_to_print = va_arg(last_fixed_arg_ptr, int);
 
-			putchar((int)(num_to_print + '0'));
+			printf("%d", num_to_print);
 			if (separator != NULL && param_index != n - 1)
 			{
-				_print_one_string(separator);
+				printf("%s", separator);
 			}
 		}
 		va_end(last_fixed_arg_ptr);
-		putchar('\n');
+		printf("\n");
 		}
 }
