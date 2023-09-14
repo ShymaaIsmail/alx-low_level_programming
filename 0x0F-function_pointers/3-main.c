@@ -25,7 +25,7 @@ return (98);
 num1 = atoi(argv[1]);
 operator = (char*)argv[2];
 num2 = atoi(argv[3]);
-if ((operator == "%" || operator == "/") && num2 == 0)
+if ((*operator == "%" || *operator == "/") && num2 == 0)
 {
 printf("Error\n");
 exit(100);
