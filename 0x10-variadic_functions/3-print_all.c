@@ -59,6 +59,7 @@ void print_all(const char * const format, ...)
 va_list arguments_pointer;
 int format_index = 0;
 int specifier_index = 0;
+int is_break = 0;
 spec_type specifiers[] = {
 {"c", print_char},
 {"i", print_integer},
@@ -69,13 +70,13 @@ spec_type specifiers[] = {
 va_start(arguments_pointer, format);
 while (format[format_index] != '\0')
 {
-while_specifier:
 while (specifier_index < 4)
 {
-if (*format[format_index] == specifiers[specifier_index].symbol)
+if (format[format_index] == *specifiers[specifier_index].symbol)
 {
 specifiers[specifier_index].print(arguments_pointer);
-break while_specifier;
+is_break = 1;
+break;
 }
 }
 }
