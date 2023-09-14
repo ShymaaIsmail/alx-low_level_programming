@@ -69,6 +69,7 @@ spec_type specifiers[] = {
 va_start(arguments_pointer, format);
 while (format[format_index] != '\0')
 {
+specifier_index = 0;
 while (specifier_index < 4)
 {
 if (format[format_index] == *specifiers[specifier_index].symbol)
