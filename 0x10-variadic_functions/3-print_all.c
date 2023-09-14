@@ -85,7 +85,7 @@ specifiers[specifier_index].print(arguments_pointer);
 
 if (format[format_index + 1] != '\0')
 {
-printf(" ,");
+printf(", ");
 }
 break;
 }
