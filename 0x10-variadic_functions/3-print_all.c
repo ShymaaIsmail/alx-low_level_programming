@@ -11,7 +11,7 @@ void print_char(va_list argument)
 {
 char char_to_print = va_arg(argument, char);
 
-printf('%c', char_to_print);
+printf("%c", char_to_print);
 }
 
 /**
@@ -22,7 +22,7 @@ void print_integer(va_list argument)
 {
 int int_to_print = va_arg(argument, int);
 
-printf('%i', int_to_print);
+printf("%i", int_to_print);
 }
 
 /**
@@ -33,7 +33,7 @@ void print_float(va_list argument)
 {
 float float_to_print = va_arg(argument, float);
 
-printf('%f', float_to_print);
+printf("%f", float_to_print);
 }
 
 
@@ -45,7 +45,7 @@ void print_string(va_list argument)
 {
 char *string_to_print = va_arg(argument, char*);
 
-printf('%s', string_to_print);
+printf("%s", string_to_print);
 }
 
 /**
