@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
+#include "variadic_functions.h"
 /**
  *_print_one_string - print string using recursion
  *@s: string
@@ -14,7 +14,7 @@ void _print_one_string(const char *s)
 
 	if (strlen(s) > 0)
 	{
-		putchar((int)*s);
+		_putchar((int)*s);
 		_print_one_string(remaning_text);
 	}
 }
@@ -36,15 +36,16 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		va_start(last_fixed_arg_ptr, n);
 		for (param_index = 0; param_index < n; param_index++)
 		{
-			int num_to_print = va_arg(last_fixed_arg_ptr, int);
+			int num_to_print = 0;
 
-			putchar((int)(num_to_print + '0'));
+			num_to_print = va_arg(last_fixed_arg_ptr, int);
+			_putchar(num_to_print + '0');
 			if (separator != NULL && param_index != n - 1)
 			{
 				_print_one_string(separator);
 			}
 		}
 		va_end(last_fixed_arg_ptr);
-		putchar('\n');
+		_putchar('\n');
 		}
 }
