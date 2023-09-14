@@ -31,7 +31,7 @@ printf("%i", int_to_print);
 */
 void print_float(va_list argument)
 {
-float float_to_print = va_arg(argument, double);
+double float_to_print = va_arg(argument, double);
 
 printf("%f", float_to_print);
 }
