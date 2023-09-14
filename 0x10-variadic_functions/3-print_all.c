@@ -59,7 +59,6 @@ void print_all(const char * const format, ...)
 va_list arguments_pointer;
 int format_index = 0;
 int specifier_index = 0;
-int is_break = 0;
 spec_type specifiers[] = {
 {"c", print_char},
 {"i", print_integer},
@@ -75,7 +74,6 @@ while (specifier_index < 4)
 if (format[format_index] == *specifiers[specifier_index].symbol)
 {
 specifiers[specifier_index].print(arguments_pointer);
-is_break = 1;
 break;
 }
 }
