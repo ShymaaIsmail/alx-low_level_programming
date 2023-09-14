@@ -11,7 +11,8 @@
  */
 int main(int argc, char *argv[])
 {
-int num1, num2, operator;
+int result, num1, num2;
+char *operator;
 int (*operation_func)(int, int);
 
 if (argc != 4)
@@ -22,7 +23,7 @@ return (98);
 }
 
 num1 = atoi(argv[1]);
-operator = (char *)argv[2];
+operator = (char*)argv[2];
 num2 = atoi(argv[3]);
 if ((operator == '%' || operator == '/') && num2 == 0)
 {
@@ -37,8 +38,7 @@ printf("Error\n");
 exit(99);
 return (99);
 }
-int result = operation_func(num1, num2);
-
+result = operation_func(num1, num2);
 printf("%d\n", result);
 return (0);
 }
