@@ -24,7 +24,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 			num_to_print = va_arg(last_fixed_arg_ptr, int);
 			printf("%d", num_to_print);
-			if (separator != NULL && param_index != n - 1)
+			if (separator != NULL && *separator != 0 && param_index != n - 1)
 			{
 				printf("%s", separator);
 			}
