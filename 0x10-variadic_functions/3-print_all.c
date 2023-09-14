@@ -76,7 +76,9 @@ if (format[format_index] == *specifiers[specifier_index].symbol)
 specifiers[specifier_index].print(arguments_pointer);
 break;
 }
+specifier_index++;
 }
+format_index++;
 }
 printf("\n");
 }
