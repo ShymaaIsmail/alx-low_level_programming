@@ -81,5 +81,6 @@ specifier_index++;
 }
 format_index++;
 }
+va_end(arguments_pointer);
 printf("\n");
 }
