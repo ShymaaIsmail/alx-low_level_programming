@@ -19,7 +19,7 @@ op_t ops[] = {
 };
 int i = 0;
 
-while (i < 6)
+while (i < 5)
 {
 if (*(ops[i].op) == *s && *(s + 1) == '\0')
 {
