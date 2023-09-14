@@ -82,6 +82,11 @@ while (specifier_index < 4)
 if (format[format_index] == *specifiers[specifier_index].symbol)
 {
 specifiers[specifier_index].print(arguments_pointer);
+
+if (format[format_index + 1] != '\0')
+{
+printf(" ,");
+}
 break;
 }
 specifier_index++;
