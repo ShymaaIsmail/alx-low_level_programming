@@ -3,7 +3,7 @@
 typedef struct spec
 {
 char *symbol;
-int (*print)();
+void (*print)();
 } spec_type;
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
