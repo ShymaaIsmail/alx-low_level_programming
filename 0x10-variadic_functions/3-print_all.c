@@ -45,7 +45,7 @@ void print_string(va_list argument)
 {
 char *string_to_print = va_arg(argument, char*);
 
-if (string_to_print == '\0')
+if (*string_to_print == '\0')
 {
 printf("(nil)");
 }
