@@ -67,7 +67,7 @@ spec_type specifiers[] = {
 };
 
 va_start(arguments_pointer, format);
-while (format != '\0')
+while (format[format_index] != '\0')
 {
 while_specifier:
 while (specifier_index < 4)
