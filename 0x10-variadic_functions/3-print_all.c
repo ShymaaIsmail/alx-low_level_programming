@@ -50,7 +50,7 @@ printf("%s", string_to_print);
 
 /**
  *print_all -  prints arguments based on format specifiers
- *@format: characters as specifiers 
+ *@format: characters as specifiers
  *@...: undefinite number of  arguments with different data types
  *Return: nothing
  */
@@ -78,5 +78,5 @@ break;
 }
 }
 }
-printf("\n");		
+printf("\n");
 }
