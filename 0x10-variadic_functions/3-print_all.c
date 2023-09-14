@@ -72,7 +72,7 @@ while (format[format_index] != '\0')
 while_specifier:
 while (specifier_index < 4)
 {
-if(format[format_index] == specifiers[specifier_index].symbol)
+if (*format[format_index] == specifiers[specifier_index].symbol)
 {
 specifiers[specifier_index].print(arguments_pointer);
 break while_specifier;
