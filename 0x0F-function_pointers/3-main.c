@@ -10,24 +10,29 @@
  */
 int main(int argc, char *argv[]) {
     if (argc != 4) {
-        printf("Usage: %s <num1> <operator> <num2>\n", argv[0]);
-        return 1;
+        printf("Error\n");
+        exit(98);
+        return (98);
     }
 
     int num1 = atoi(argv[1]);
     char *operator = argv[2];
     int num2 = atoi(argv[3]);
+if ((operator == '%' || operator == '/') && num2 == 0)
+{
+printf("Error\n");
+    exit(100);
+    return (100);
+}
+    int (*operation_func)(int, int) = get_op_func(operator);
 
-    int (*func)(int, int) = get_op_func(operator);
+    if (operation_func == NULL) {
+        printf("Error\n");
+        exit(99);
+        return (99);
+}
+int result = operation_func(num1, num2);
 
-    if (func == NULL) {
-        printf("Invalid operator: %s\n", operator);
-        return 1;
-    }
-
-    int result = func(num1, num2);
-
-    printf("%d %s %d = %d\n", num1, operator, num2, result);
-
-    return 0;
+printf("%d\n", result);
+return 0;
 }
