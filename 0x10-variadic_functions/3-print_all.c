@@ -62,6 +62,7 @@ printf("%s", string_to_print);
 void print_all(const char * const format, ...)
 {
 va_list arguments_pointer;
+char *splitter = "";
 int format_index = 0;
 int specifier_index = 0;
 spec_type specifiers[] = {
@@ -79,12 +80,9 @@ while (specifier_index < 4)
 {
 if (format[format_index] == *specifiers[specifier_index].symbol)
 {
+printf("%s", splitter);
 specifiers[specifier_index].print(arguments_pointer);
-
-if (format[format_index + 1] != '\0')
-{
-printf(", ");
-}
+splitter = ", ";
 break;
 }
 specifier_index++;
