@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
+#include <stddef.h>
 
 /**
 *print_char - print one char
@@ -61,6 +62,8 @@ printf("%s", string_to_print);
  */
 void print_all(const char * const format, ...)
 {
+if(format != NULL)
+{
 va_list arguments_pointer;
 char *splitter = "";
 int format_index = 0;
@@ -90,5 +93,6 @@ specifier_index++;
 format_index++;
 }
 va_end(arguments_pointer);
+}
 printf("\n");
 }
