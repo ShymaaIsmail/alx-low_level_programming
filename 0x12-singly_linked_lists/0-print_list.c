@@ -18,5 +18,5 @@ printf("[%d] %s", h->len, (h->str != NULL ? h->str : "(nil)"));
 
 size++;
 }
-return size;
+return (size);
 }
