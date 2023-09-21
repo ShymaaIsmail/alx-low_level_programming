@@ -1,3 +1,5 @@
+#ifndef HEADER_FILE
+#define HEADER_FILE
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
@@ -12,3 +14,4 @@ typedef struct list_s
     unsigned int len;
     struct list_s *next;
 } list_t;
+#endif
