@@ -10,20 +10,19 @@ char *str_dup = strdup(str);
 
 if (new_node == NULL)
 {
-return NULL;
+return (NULL);
 }
-
 if (str_dup == NULL)
 {
- free(new_node);
- return NULL;
+free(new_node);
+return (NULL);
 }
 new_node->str = str_dup;
 new_node->next = NULL;
 if (*head == NULL)
 {
 *head = new_node;
-} 
+}
 else
 {
 list_t *current = *head;
@@ -34,5 +33,5 @@ current = current->next;
 current->next = new_node;
 }
 new_node->len = strlen(str);
-return new_node;
+return (new_node);
 }
