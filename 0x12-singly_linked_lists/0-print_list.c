@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
 #include "lists.h"
 
 /**
@@ -11,7 +12,7 @@ size_t print_list(const list_t *h)
 {
 int size = 0, index = 0;
 
-for (index = 0; *h != '\0'; index++)
+for (index = 0; h != NULL; index++)
 {
 printf("[%d] %s", h->len, h->str? h->str : "(nil)");
 
