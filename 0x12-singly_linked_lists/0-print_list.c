@@ -12,9 +12,9 @@ size_t print_list(const list_t *h)
 {
 int size = 0, index = 0;
 
-for (index = 0; h[index] != '\0'; index++)
+for (index = 0; *h[index] != '\0'; index++)
 {
-list_t element = h[index];
+list_t *element = h[index];
 
 printf("[%d] %s", element->len, element->str? element->str : "(nill)");
 
