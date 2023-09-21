@@ -28,6 +28,7 @@ free(new_node);
 return (NULL);
 }
 new_node->next = *head;
+new_node->len = strlen(str);
 *head = new_node;
 return (new_node);
 }
