@@ -33,5 +33,6 @@ current = current->next;
 }
 current->next = new_node;
 }
+new_node->len = strlen(str);
 return new_node;
 }
