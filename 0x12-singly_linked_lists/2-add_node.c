@@ -4,19 +4,26 @@
 #include "lists.h"
 
 /**
- *add_node -  prints list of elements
- *@h: pointer to  list of nodes of type list_t
+ *add_node -  add noteds to ist of elements
+ *@head: head ptr for linked list
+ *@str: string
  *Return: size of list elements
  */
 list_t *add_node(list_t **head, const char *str)
 {
-int size = 0, index = 0;
-
-for (index = 0; h != NULL; index++)
-{
-printf("[%d] %s\n", h->len, (h->str != NULL ? h->str : "(nil)"));
-h = h->next;
-size++;
-}
-return (size);
+    if (str == NULL) {
+        return NULL;
+    }
+    list_t *new_node = (list_t *)malloc(sizeof(list_t));
+    if (new_node == NULL) {
+        return NULL;
+    }
+    new_node->str = strdup(str);
+    if (new_node->str == NULL) {
+        free(new_node);
+        return NULL;
+    }
+    new_node->next = *head;
+    *head = new_node;
+    return new_node;
 }
