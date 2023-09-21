@@ -14,7 +14,7 @@ int size = 0, index = 0;
 
 for (index = 0; h != NULL; index++)
 {
-printf("[%d] %s", h->len, h->str? h->str : "(nil)");
+printf("[%d] %s", h->len, (h->str != NULL ? h->str : "(nil)"));
 
 size++;
 }
