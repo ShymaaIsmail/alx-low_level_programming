@@ -7,10 +7,10 @@
 *@head: head
 *Return: no return
 */
-void free_list(list_t* head)
+void free_list(list_t *head)
 {
-list_t* current = head;
-list_t* next;
+list_t *current = head;
+list_t *next;
 
 while (current != NULL)
 {
