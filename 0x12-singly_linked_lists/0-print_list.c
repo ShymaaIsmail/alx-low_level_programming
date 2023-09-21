@@ -11,7 +11,7 @@ size_t print_list(const list_t *h)
 {
 int size = 0, index = 0;
 
-for (index = 0; h != '\0'; index++)
+for (index = 0; *h != '\0'; index++)
 {
 printf("[%d] %s", h->len, h->str? h->str : "(nil)");
 
