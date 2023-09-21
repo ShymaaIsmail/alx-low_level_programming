@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
@@ -12,11 +11,9 @@ size_t print_list(const list_t *h)
 {
 int size = 0, index = 0;
 
-for (index = 0; *h[index] != '\0'; index++)
+for (index = 0; h != '\0'; index++)
 {
-list_t *element = h[index];
-
-printf("[%d] %s", element->len, element->str? element->str : "(nill)");
+printf("[%d] %s", h->len, h->str? h->str : "(nil)");
 
 size++;
 }
