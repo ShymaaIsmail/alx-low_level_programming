@@ -21,7 +21,7 @@ new_node = (listint_t *)malloc(sizeof(listint_t));
 if (new_node != NULL)
 {
 new_node->n = n;
-if (idx == 0)
+if (idx == 0 || *head == NULL)
 {
 new_node->next = *head;
 *head = new_node;
