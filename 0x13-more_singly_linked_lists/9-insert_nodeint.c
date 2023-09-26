@@ -30,7 +30,7 @@ else
 {
 temp = *head;
 count = 0;
-while (temp != NULL && count != idx - 1)
+while (temp != NULL && count < idx - 1)
 {
 temp = temp->next;
 count++;
