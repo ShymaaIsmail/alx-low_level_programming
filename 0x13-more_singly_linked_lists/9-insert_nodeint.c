@@ -17,7 +17,7 @@ unsigned int count;
 
 if (head != NULL)
 {
-new_node= (listint_t *)malloc(sizeof(listint_t));
+new_node = (listint_t *)malloc(sizeof(listint_t));
 if (new_node != NULL)
 {
 new_node->n = n;
