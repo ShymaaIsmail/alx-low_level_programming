@@ -35,7 +35,7 @@ while (temp != NULL && count < idx - 1)
 temp = temp->next;
 count++;
 }
-if (count != id - 1 || temp == NULL || temp->next == NULL)
+if (count != idx - 1 || temp == NULL || temp->next == NULL)
 {
 free(new_node);
 return (NULL);
