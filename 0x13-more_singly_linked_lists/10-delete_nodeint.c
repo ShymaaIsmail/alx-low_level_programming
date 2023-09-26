@@ -34,7 +34,7 @@ if (current == NULL || current->next == NULL)
 {
 return (-1);
 }
-next_node = current->next->next;
+*next_node = current->next->next;
 free(current->next);
 current->next = next_node;
 return (1);
