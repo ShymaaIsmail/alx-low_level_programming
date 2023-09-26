@@ -35,7 +35,7 @@ while (temp != NULL && count < idx - 1)
 temp = temp->next;
 count++;
 }
-if (temp != NULL && idx - 1 = count)
+if (temp != NULL && idx - 1 == count)
 {
 new_node->next = temp->next;
 temp->next = new_node;
