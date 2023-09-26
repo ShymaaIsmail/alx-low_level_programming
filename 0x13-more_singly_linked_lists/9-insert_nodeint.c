@@ -40,11 +40,8 @@ if (temp == NULL || temp->next == NULL)
 free(new_node);
 return (NULL);
 }
-if (temp != NULL && idx - 1 == count)
-{
 new_node->next = temp->next;
 temp->next = new_node;
-}
 }
 }
 }
