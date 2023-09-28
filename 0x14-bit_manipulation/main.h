@@ -1,4 +1,4 @@
-#ifndefine _bit_manipulation_
+#ifndef _bit_manipulation_
 #define _bit_manipulation_
 #include <string.h>
 #include <stdio.h>
