@@ -13,7 +13,7 @@ int b_value = -1;
 
 if (index <= 64)
 {
-*n ^= mask;
+*n &= mask;
 b_value = 1;
 }
 
