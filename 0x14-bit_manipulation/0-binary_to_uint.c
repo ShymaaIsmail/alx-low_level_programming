@@ -20,6 +20,7 @@ for (index = length - 1; index >= 0; index--, i++)
 if(b[index] == '0' || b[index] == '1')
 {
 temp = i;
+powered = 1;
 while (temp >= 0)
 {
 if (temp == 0 && powered == 1)
