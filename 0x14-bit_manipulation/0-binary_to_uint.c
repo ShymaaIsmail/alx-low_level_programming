@@ -21,17 +21,9 @@ if(b[index] == '0' || b[index] == '1')
 {
 temp = i;
 powered = 1;
-while (temp >= 0)
-{
-if (temp == 0 && powered == 1)
-{
-powered = 1;
-break;
-}
-else
+while (temp > 0)
 {
 powered *= 2;
-}
 temp--;
 }
 if (b[index] == '1')
