@@ -31,7 +31,7 @@ powered += 2 * i;
 }
 i--;
 }
-converted_value += atoi(b[index]) * powered;
+converted_value += (b[index] - '0') * powered;
 }
 else
 {
