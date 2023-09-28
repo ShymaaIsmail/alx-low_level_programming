@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+*print_binary - f
+*@n: n
+*Return: void
+*/
 void print_binary(unsigned long int n)
 {
 unsigned long int mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
