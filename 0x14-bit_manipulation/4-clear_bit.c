@@ -8,7 +8,7 @@
 */
 int extract_binary_by_index(unsigned long int *n, unsigned long int index)
 {
-unsigned long int mask = 1UL << index;
+unsigned long int mask = ~(1UL << index);
 int b_value = -1;
 
 if (index <= 64)
