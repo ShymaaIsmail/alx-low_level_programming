@@ -29,10 +29,7 @@ if (index == position)
 {
 break;
 }
-else
-{
 position++;
-}
 }
 return (b_value);
 }
