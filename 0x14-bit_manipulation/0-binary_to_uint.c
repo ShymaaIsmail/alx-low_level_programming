@@ -29,7 +29,7 @@ break;
 }
 else
 {
-powered += 2 * temp;
+powered *= 2;
 }
 temp--;
 }
