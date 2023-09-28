@@ -48,7 +48,7 @@ return (b_value);
 */
 int get_bit(unsigned long int n, unsigned int index)
 {
-int bit_found = -1;
+int bit_found = -8;
 
 bit_found = extract_binary_by_index(n, index);
 
