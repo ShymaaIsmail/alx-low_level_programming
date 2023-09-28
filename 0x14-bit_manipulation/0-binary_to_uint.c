@@ -7,7 +7,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int convered_value = 0;
+unsigned int converted_value = 0;
 int length = 0, index = 0;
 
 if (b != NULL)
@@ -17,11 +17,11 @@ for (index = length - 1 ;index >= 0; index--)
 {
 if(b[index] == 0 || b[index] == 1)
 {
-result += pow(2, index);
+converted_value += pow(2, index);
 }
 else
 {
-result = 0;
+converted_value = 0;
 break;
 }
 }
