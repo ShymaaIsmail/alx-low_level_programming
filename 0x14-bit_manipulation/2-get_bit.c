@@ -8,33 +8,11 @@
 */
 int extract_binary_by_index(unsigned long int n, unsigned long int index)
 {
-unsigned long int mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
-int leadingZeros = 1;
-unsigned long int position = 0;
+unsigned long int mask = 1UL << index;
 int b_value = -1;
 
-while (mask > 0)
-{
-if ((n & mask) != 0)
-{
-leadingZeros = 0;
-if (index == position)
-{
-b_value = 1;
-break;
-}
-}
-else if (!leadingZeros)
-{
-if (index == position)
-{
-b_value = 0;
-break;
-}
-}
-mask << index;
-position++;
-}
+b_value = (n & mask > 0) ? 1 : 0;
+
 return (b_value);
 }
 
