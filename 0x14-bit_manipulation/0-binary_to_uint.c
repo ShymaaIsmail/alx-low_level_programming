@@ -10,16 +10,16 @@
 unsigned int binary_to_uint(const char *b)
 {
 unsigned int converted_value = 0;
-int length = 0, index = 0;
+int length = 0, index = 0, i = 0;
 
-if (*b != NULL)
+if (b != NULL)
 {
 length = strlen(b);
-for (index = length - 1 ;index >= 0; index--)
+for (index = length - 1; index >= 0; index--, i++)
 {
 if(b[index] == 0 || b[index] == 1)
 {
-converted_value += pow(2, index);
+converted_value += pow(2, i);
 }
 else
 {
