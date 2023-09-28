@@ -35,8 +35,8 @@ break;
 mask >>= 1;
 position++;
 }
-printf("index is %d\n", index);
-printf("position is %d\n", position);
+printf("index is %lu\n", index);
+printf("position is %lu\n", position);
 return (b_value);
 }
 
