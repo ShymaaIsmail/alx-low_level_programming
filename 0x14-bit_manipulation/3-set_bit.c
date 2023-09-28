@@ -14,6 +14,7 @@ int b_value = -1;
 if (index <= 64)
 {
 *n |= mask;
+b_value = 1;
 }
 
 return (b_value);
