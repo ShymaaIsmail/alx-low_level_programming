@@ -25,7 +25,6 @@ else if (!leadingZeros)
 b_value = 0;
 }
 mask >>= 1;
-}
 if (index == position)
 {
 break;
@@ -33,6 +32,7 @@ break;
 else
 {
   position++;
+}
 }
 }
 return (b_value);
