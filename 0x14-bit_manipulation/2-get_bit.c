@@ -13,8 +13,6 @@ int leadingZeros = 1;
 unsigned long int position = 0;
 int b_value = -1;
 
-if (n > 0)
-{
 while (mask > 0)
 {
 if ((n & mask) != 0)
@@ -36,7 +34,6 @@ else
 position++;
 }
 }
-}
 return (b_value);
 }
 
@@ -48,7 +45,7 @@ return (b_value);
 */
 int get_bit(unsigned long int n, unsigned int index)
 {
-int bit_found = -8;
+int bit_found = -1;
 
 bit_found = extract_binary_by_index(n, index);
 
