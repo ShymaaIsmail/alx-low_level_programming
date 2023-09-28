@@ -10,7 +10,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 unsigned int converted_value = 0;
-int length = 0, index = 0, i = 0;
+int length = 0, index = 0, i = 0, powered = 0;
 
 if (b != NULL)
 {
@@ -19,7 +19,19 @@ for (index = length - 1; index >= 0; index--, i++)
 {
 if(b[index] == 0 || b[index] == 1)
 {
-converted_value += b[index] * pow(2, i);
+while (i >= 0)
+{
+if (i == 0 && powered == 0)
+{
+powered = 1;
+}
+else
+{
+powered += 2 * i;
+}
+i--;
+}
+converted_value += b[index] * powered;
 }
 else
 {
