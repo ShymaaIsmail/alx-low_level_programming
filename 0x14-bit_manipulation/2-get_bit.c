@@ -11,7 +11,7 @@ int extract_binary_by_index(unsigned long int n, unsigned long int index)
 unsigned long int mask = 1UL << index;
 int b_value = -1;
 
-b_value = (n & mask > 0) ? 1 : 0;
+b_value = (n & mask) > 0 ? 1 : 0;
 
 return (b_value);
 }
