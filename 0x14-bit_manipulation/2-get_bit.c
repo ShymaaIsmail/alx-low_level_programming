@@ -12,6 +12,7 @@ unsigned long int mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
 int leadingZeros = 1;
 unsigned long int position = 0;
 int b_value = -1;
+
 if (n > 0)
 {
 while (mask > 0)
@@ -32,7 +33,7 @@ break;
 }
 else
 {
-  position++;
+position++;
 }
 }
 }
