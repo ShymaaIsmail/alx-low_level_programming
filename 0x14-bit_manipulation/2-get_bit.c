@@ -18,17 +18,21 @@ while (mask > 0)
 if ((n & mask) != 0)
 {
 leadingZeros = 0;
+if (index == position)
+{
 b_value = 1;
+break;
+}
 }
 else if (!leadingZeros)
 {
-b_value = 0;
-}
-mask >>= 1;
 if (index == position)
 {
+b_value = 0;
 break;
 }
+}
+mask >>= 1;
 position++;
 }
 return (b_value);
