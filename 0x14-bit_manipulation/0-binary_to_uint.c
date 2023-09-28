@@ -17,7 +17,7 @@ if (b != NULL)
 length = strlen(b);
 for (index = length - 1; index >= 0; index--, i++)
 {
-if(b[index] == '0' || b[index] == '1')
+if (b[index] == '0' || b[index] == '1')
 {
 temp = i;
 powered = 1;
