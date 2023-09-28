@@ -21,6 +21,8 @@ leadingZeros = 0;
 if (index == position)
 {
 b_value = 1;
+printf("index is %lu\n", index);
+printf("position is %lu\n", position);
 break;
 }
 }
@@ -29,14 +31,14 @@ else if (!leadingZeros)
 if (index == position)
 {
 b_value = 0;
+printf("ind00ex is %lu\n", index);
+printf("po00sition is %lu\n", position);
 break;
 }
 }
 mask >>= 1;
 position++;
 }
-printf("index is %lu\n", index);
-printf("position is %lu\n", position);
 return (b_value);
 }
 
