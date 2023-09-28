@@ -19,7 +19,7 @@ for (index = length - 1; index >= 0; index--, i++)
 {
 if(b[index] == 0 || b[index] == 1)
 {
-converted_value += pow(2, i);
+converted_value += b[index] * pow(2, i);
 }
 else
 {
