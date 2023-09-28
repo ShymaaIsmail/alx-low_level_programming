@@ -34,7 +34,10 @@ powered *= 2;
 }
 temp--;
 }
-converted_value += (b[index] - '0') * powered;
+if (b[index] == '1')
+{
+converted_value += powered;
+}
 }
 else
 {
