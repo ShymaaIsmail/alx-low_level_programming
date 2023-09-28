@@ -17,7 +17,7 @@ for (index = length - 1 ;index >= 0; index--)
 {
 if(b[index] == 0 || b[index] == 1)
 {
-result = 
+result += pow(2, index);
 }
 else
 {
