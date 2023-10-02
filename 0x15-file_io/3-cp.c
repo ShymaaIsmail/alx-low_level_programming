@@ -1,5 +1,25 @@
 #include "main.h"
 
+
+/**
+* close_file_descriptor - close_file_descriptor
+* @fd1: fd1
+* @fd2: fd2
+* Return: void
+*/
+void close_file_descriptor(int fd1, int fd2)
+{
+if (close(fd1) < 0)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
+exit(100);
+}
+if (close(fd2) < 0)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
+exit(100);
+}
+}
 /**
  * main - check the code
  * @ac: ac
@@ -46,5 +66,6 @@ exit(99);
 }
 }
 }
+close_file_descriptor(fd_source, fd_dest);
 return (result);
 }
