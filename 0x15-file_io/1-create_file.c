@@ -21,7 +21,6 @@ if (filename != NULL)
     close(fd);
     result = 1;
   }
-
 }
 return (result);
 }
