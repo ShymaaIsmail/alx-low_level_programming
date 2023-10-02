@@ -10,16 +10,19 @@
 */
 int create_file(const char *filename, char *text_content)
 {
-int result = -1, fd;
+int result = -1, fd, write_result = 0;
 
 if (filename != NULL)
 {
-  fd = open(filename, O_WRONLY);
+  fd = open(filename, O_WRONLY | O_CREAT);
   if (fd >= 0)
   {
-    dprintf(fd, "%s", text_content);
+    write_result = write(fd, text_content, strlen(text_content));
+    if (write_result >= 0)
+    {
+      result = 1;
+    }
     close(fd);
-    result = 1;
   }
 }
 return (result);
