@@ -9,7 +9,7 @@
 int main(int ac, char **av)
 {
 int result = 0;
-char *source_file, dest_file;
+char *source_file, *dest_file;
 int fd_source, fd_dest;
 char content_buffer[BUFFER_SIZE];
 ssize_t bytes_read, bytes_written;
