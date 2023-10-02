@@ -10,6 +10,7 @@ int main(int ac, char **av)
 {
 int result = 0;
 
+(void *)av;
 if (ac != 3)
 {
 dprintf(1, "Usage: cp file_from file_to");
