@@ -16,7 +16,7 @@ ssize_t bytes_read, bytes_written;
 
 if (ac != 3)
 {
-dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
+dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97);
 }
 else
