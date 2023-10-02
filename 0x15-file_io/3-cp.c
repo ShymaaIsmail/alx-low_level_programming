@@ -67,5 +67,6 @@ exit(99);
 }
 }
 close_file_descriptor(fd_source, fd_dest);
+result = 1;
 return (result);
 }
