@@ -21,11 +21,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		{
 		buff = (char *)malloc(letters * sizeof(char));
 		actual_letters = read(fd, buff, letters);
+		if (actual_letters == -1)
+		{
+			actual_letters = 0;
+		}
+		else
+		{
 		buff[fd] = '\0';
 		write_result = write(STDOUT_FILENO, buff, actual_letters);
 		if (write_result == -1)
 		{
 			actual_letters = 0;
+		}
 		}
 		close(fd);
 		free(buff);
