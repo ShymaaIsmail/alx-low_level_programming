@@ -20,6 +20,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		if (fd >= 0)
 		{
 		buff = (char *)malloc(letters * sizeof(char));
+		if (buff != NULL)
+		{
 		actual_letters = read(fd, buff, letters);
 		if (actual_letters < 0)
 		{
@@ -34,8 +36,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			actual_letters = 0;
 		}
 		}
-		close(fd);
 		free(buff);
+		}
+		close(fd);
 		}
 	}
 	return (actual_letters);
