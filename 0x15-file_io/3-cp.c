@@ -67,7 +67,5 @@ exit(99);
 }
 }
 close_file_descriptor(fd_source, fd_dest);
-free(dest_file);
-free(source_file);
 return (result);
 }
