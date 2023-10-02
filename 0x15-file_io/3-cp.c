@@ -16,7 +16,7 @@ ssize_t bytes_read, bytes_written;
 
 if (ac != 3)
 {
-dprintf(STDERR_FILENO, "Usage: cp file_from file_to", "");
+dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
 exit(97);
 }
 else
@@ -41,7 +41,7 @@ bytes_written = write(fd_dest, content_buffer, bytes_read);
 if (bytes_written == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest_file);
-exit(99)
+exit(99);
 }
 }
 }
