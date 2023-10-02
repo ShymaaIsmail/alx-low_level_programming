@@ -12,6 +12,7 @@ int result = 0;
 char *source_file, dest_file;
 int fd_source, fd_dest;
 char content_buffer[BUFFER_SIZE];
+ssize_t bytes_read, bytes_written;
 
 if (ac != 3)
 {
@@ -34,18 +35,15 @@ if (fd_dest == -1)
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest_file);
 exit(99);
 }
-
-    
-    ssize_t bytesRead, bytesWritten;
-
-    while ((bytesRead = read(fdFrom, buffer, BUFFER_SIZE)) > 0) {
-        bytesWritten = write(fdTo, buffer, bytesRead);
-        if (bytesWritten == -1) {
-            exitWithError("Error: Can't write to %s\n", fileTo, 99);
-        }
-    }
-
-
+while ((bytes_read = read(fd_source, content_buffer, BUFFER_SIZE)) > 0)
+{
+bytes_written = write(fd_dest, content_buffer, bytes_read);
+if (bytes_written == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest_file);
+exit(99)
+}
+}
 }
 return (result);
 }
