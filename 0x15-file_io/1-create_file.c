@@ -14,7 +14,7 @@ int result = -1, fd, write_result = 0;
 
 if (filename != NULL)
 {
-  fd = open(filename, O_WRONLY | O_CREAT | S_IRUSR | S_IWUSR);
+  fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
   if (fd >= 0)
   {
     text_content = text_content == NULL ? "" : text_content;
