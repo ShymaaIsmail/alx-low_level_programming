@@ -14,7 +14,7 @@ int result = -1, fd, write_result = 0;
 
 if (filename != NULL)
 {
-fd = open(filename, O_WRONLY | O_ APPEND);
+fd = open(filename, O_WRONLY | O_APPEND);
 if (fd >= 0)
 {
 text_content = text_content == NULL ? "" : text_content;
