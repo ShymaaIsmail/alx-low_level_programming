@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
 * print_dlistint - print_dlistint
 * @h: head node
