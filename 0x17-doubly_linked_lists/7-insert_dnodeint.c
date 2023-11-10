@@ -7,7 +7,8 @@
 * @n: n
 * Return: node
 */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
+										unsigned int idx, int n)
 {
 dlistint_t *current_node = *head;
 
