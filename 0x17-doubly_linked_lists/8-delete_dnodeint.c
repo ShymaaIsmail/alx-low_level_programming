@@ -13,9 +13,14 @@ unsigned int i;
 
 dlistint_t *temp = *head, *prev;
 
+if (head == NULL)
+	return (-1);
+
 if (temp == NULL || index == 0)
 {
 	*head = temp->next;
+	if (*head != NULL)
+		(*head)->prev = NULL;
 	free(temp);
 	return (1);
 }
