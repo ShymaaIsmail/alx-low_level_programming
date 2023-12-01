@@ -9,6 +9,7 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	int index = 0;
+
 	hash_node_t *current;
 	char *v = NULL;
 
@@ -23,7 +24,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 				v = current->value;
 				break;
 			}
-		current = current->next;
+		    current = current->next;
+		}
 	}
 	return (v);
 }
