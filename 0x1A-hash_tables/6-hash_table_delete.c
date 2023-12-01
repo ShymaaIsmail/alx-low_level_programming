@@ -18,9 +18,9 @@ current = ht->array[i];
 while (current != NULL)
 {
 temp = current;
+current = current->next;
 free(temp->key);
 free(temp->value);
-current = current->next;
 free(temp);
 }
 }
