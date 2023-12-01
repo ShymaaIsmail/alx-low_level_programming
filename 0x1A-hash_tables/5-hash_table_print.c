@@ -21,6 +21,10 @@ while (current != NULL)
 printf("'%s': '%s'",current->key,
   current->value);
 current = current->next;
+if (current != NULL)
+{
+printf(", ");
+}
 }
 i++;
 }
