@@ -14,6 +14,8 @@ if (ht != NULL)
 {
 for (i = 0; i < ht->size; i++)
 {
+if (ht->array != NULL)
+{
 current = ht->array[i];
 while (current != NULL)
 {
@@ -22,6 +24,7 @@ current = current->next;
 free(temp->key);
 free(temp->value);
 free(temp);
+}
 }
 }
 free(ht->array);
