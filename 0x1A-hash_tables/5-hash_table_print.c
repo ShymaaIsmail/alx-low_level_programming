@@ -8,14 +8,14 @@
 void hash_table_print(const hash_table_t *ht)
 {
 int i = 0;
-hash_node_t current;
+hash_node_t *current;
 
 if (ht != NULL)
 {
 printf("{");
 while (i < ht->size)
 {
-current = ht->array[index];
+current = ht->array[i];
 while (current != NULL)
 {
 printf("'%s': '%s'",current->key,
@@ -28,6 +28,6 @@ printf(", ");
 }
 i++;
 }
-printf("}");
+printf("}\n");
 }
 }
