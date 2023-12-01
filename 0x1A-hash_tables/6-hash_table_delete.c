@@ -24,6 +24,7 @@ current = current->next;
 free(temp);
 }
 }
+free(ht->array);
 free(ht);
 }
 }
