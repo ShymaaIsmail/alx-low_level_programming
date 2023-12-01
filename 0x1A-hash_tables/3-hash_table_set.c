@@ -40,15 +40,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			if (temp == NULL)
 			{
 				new_node->next = ht->array[index];
-				ht->array[index] = new_node;
-				is_set = 1;
+				ht->array[index] = new_node, is_set = 1;
 			}
 		}
 		else
-		{
-			ht->array[index] = new_node;
-			is_set = 1;
-		}
+			ht->array[index] = new_node, is_set = 1;
 		}
 	}
 	return (is_set);
