@@ -26,14 +26,29 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (ht->array[index])
 		{
 			temp = ht->array[index];
-			ht->array[index] = new_node;
-			new_node->next = temp;
+			while (temp != NULL)
+			{
+				if (strcmp(temp->key, key) == 0)
+				{
+					free(temp->value);
+					temp->value = strdup((char *)value);
+					is_set = 1;
+					break;
+				}
+				temp = temp->next;
+			}
+			if (temp == NULL)
+			{
+				new_node->next = ht->array[index];
+				ht->array[index] = new_node;
+				is_set = 1;
+			}
 		}
 		else
 		{
 			ht->array[index] = new_node;
+			is_set = 1;
 		}
-		is_set = 1;
 		}
 	}
 	return (is_set);
