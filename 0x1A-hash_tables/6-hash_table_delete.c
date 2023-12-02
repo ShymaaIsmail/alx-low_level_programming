@@ -14,7 +14,7 @@ if (ht != NULL)
 {
 for (i = 0; i < ht->size; i++)
 {
-if (ht->array != NULL)
+if (ht->array[i] != NULL)
 {
 current = ht->array[i];
 while (current != NULL)
