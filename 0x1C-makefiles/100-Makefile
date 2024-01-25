@@ -5,14 +5,17 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 DEPS = $(SRC:.c=.d)
 
-.PHONY: all clean
+.PHONY: all clean check_header
 
 $(NAME): $(OBJ)
 	$(CC) $(value CFLAGS) $^ -o $@
 
 -include $(DEPS)
 
-all: $(NAME)
+check_header:
+	@test -f m.h || (echo "Header file m.h is missing!" && exit 1)
+
+all: | check_header $(NAME)
 
 clean:
 	$(RM) *~ *.swp $(NAME)
