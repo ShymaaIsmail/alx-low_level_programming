@@ -8,6 +8,6 @@
 int main(void)
 {
 	print_school();
-	printf("Dds");
+	printf("Dkkkds");
 	return (EXIT_SUCCESS);
 }

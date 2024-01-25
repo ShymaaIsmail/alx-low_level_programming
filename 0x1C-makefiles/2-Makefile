@@ -4,7 +4,7 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 DEPS = $(SRC:.c=.d)
 
-$(NAME): $(SRC)
+$(NAME): $(OBJ)
 	$(CC) $^ -o $@
 
 -include $(DEPS)
