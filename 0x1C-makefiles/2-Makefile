@@ -2,7 +2,11 @@ CC = gcc
 NAME = school
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
+DEPS = $(SRC:.c=.d)
 
 $(NAME): $(SRC)
 	$(CC) $^ -o $@
+
+-include $(DEPS)
+
 all: $(TARGET)

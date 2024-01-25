@@ -3,10 +3,11 @@
 /**
  * main - Entry point
  *
- * Return: Always 
+ * Return: Always
  */
 int main(void)
 {
 	print_school();
+	printf("Dds");
 	return (EXIT_SUCCESS);
 }
