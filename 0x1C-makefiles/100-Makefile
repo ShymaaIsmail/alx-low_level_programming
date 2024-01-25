@@ -7,12 +7,11 @@ DEPS = $(SRC:.c=.d)
 
 .PHONY: all clean oclean fclean re
 
-$(NAME): $(OBJ)
-	$(CC) $(value CFLAGS) $^ -o $@
 
 -include $(DEPS)
 
 all: m.h $(OBJ)
+	$(CC) $(value CFLAGS) $^ -o $@
 
 clean:
 	$(RM) *~ *.swp $(NAME)
