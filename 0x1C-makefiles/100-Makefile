@@ -10,10 +10,10 @@ DEPS = $(SRC:.c=.d)
 -include $(DEPS)
 
 
-$(NAME): $(OBJ)
+$(NAME): m.h $(OBJ)
 	$(CC) $(value CFLAGS) $^ -o $@
 
-all: | m.h $(NAME)
+all: $(NAME)
 
 clean:
 	$(RM) *~ *.swp $(NAME)
