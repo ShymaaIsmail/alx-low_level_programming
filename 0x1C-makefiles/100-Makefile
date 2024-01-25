@@ -6,7 +6,7 @@ OBJ = $(SRC:.c=.o)
 DEPS = $(SRC:.c=.d)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $^ -o $@
+	$(CC) $(value CFLAGS) $^ -o $@
 
 -include $(DEPS)
 
