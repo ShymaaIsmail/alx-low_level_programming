@@ -3,7 +3,7 @@ NAME = school
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 DEPS = $(SRC:.c=.d)
-RM = rm
+RM = rm -f
 
 $(NAME): $(OBJ)
 	$(CC) $^ -o $@
