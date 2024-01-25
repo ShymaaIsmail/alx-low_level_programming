@@ -5,6 +5,8 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 DEPS = $(SRC:.c=.d)
 
+.PHONY: all clean
+
 $(NAME): $(OBJ)
 	$(CC) $(value CFLAGS) $^ -o $@
 
