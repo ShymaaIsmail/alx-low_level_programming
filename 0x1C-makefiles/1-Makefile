@@ -1,7 +1,7 @@
-GCC = gcc
-TARGET = school
+CC = gcc
 SRC = main.c school.c
 
-$(TARGET): $(SRC)
-	$(CC) $^ -o $@
+school: $(SRC)
+	$(CC) $^ -o school
+
 all: $(TARGET)
