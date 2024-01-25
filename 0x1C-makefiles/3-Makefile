@@ -10,10 +10,10 @@ $(NAME): $(OBJ)
 
 -include $(DEPS)
 
-all: $(TARGET)
+all: $(NAME)
 
 clean:
-	$(RM) *~ *.swp $(TARGET)
+	$(RM) *~ *.swp $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
