@@ -1,0 +1,7 @@
+GCC = gcc
+TARGET = school
+SRCS = main.c school.c
+
+$(TARGET): $(SRCS)
+	$(CC) $^ -o $@
+all: $(TARGET)
